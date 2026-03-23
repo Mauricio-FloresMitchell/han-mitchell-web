@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. VARIABLES Y CONFIGURACIÓN BASE (BRANDING)
+   1. VARIABLES Y CONFIGURACIÓN BASE
    ========================================================================== */
 :root {
     --bg-color: #000000;
@@ -7,7 +7,6 @@
     --text-main: #ffffff;
     --text-dim: #999999;
     
-    /* Colores de Marca Extraídos de tus Imágenes */
     --brand-orange: #ff9d2a; /* Naranja fuego */
     --brand-cyan: #14cdb8;   /* Cian tecnológico */
     --brand-green-wa: #25d366; /* Verde WhatsApp */
@@ -36,22 +35,25 @@ body {
     overflow-x: hidden;
 }
 
-/* Capa de Textura (Halftone Dots) */
+/* --- Estilo para la textura de fondo (Ajuste Verde Halftone) --- */
 .texture-overlay {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
-    background-size: 20px 20px; /* Tamaño de los puntos */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #003300 1.5px, transparent 1px);
+    background-size: 20px 20px;
     opacity: 0.15;
+    z-index: -1;
     pointer-events: none;
-    z-index: 999;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    padding-bottom: 20px;
     position: relative;
     z-index: 10;
 }
@@ -73,7 +75,7 @@ h1 {
 
 h1 .no-solo {
     color: var(--brand-orange);
-    display: block; /* Forzar salto de línea en móvil */
+    display: block; 
 }
 
 @media (min-width: 900px) {
@@ -108,7 +110,6 @@ h2 {
     position: relative;
 }
 
-/* Efecto de resplandor detrás de tu foto */
 .hero-image-container::after {
     content: '';
     position: absolute;
@@ -128,8 +129,18 @@ h2 {
 }
 
 .logo-hero {
-    height: 45px;
-    margin-bottom: 20px;
+    height: auto;
+    width: 55%;
+    max-width: 100px;
+    margin-bottom: 15px;
+    image-rendering: auto;
+}
+
+@media (min-width: 800px) {
+    .logo-hero {
+        max-width: 80px;
+        width: auto;
+    }
 }
 
 .tagline {
@@ -336,13 +347,13 @@ input:focus, textarea:focus {
 .popup-avatar { width: 80px; margin-bottom: 15px; border-radius: 50%; }
 
 /* ==========================================================================
-   7. FOOTER
+   7. FOOTER (Ajustes de espacio reducidos)
    ========================================================================== */
 .main-footer {
     text-align: center;
-    padding: 60px 20px 40px;
+    padding: 30px 20px 20px; /* Reducción de padding superior e inferior */
     border-top: 1px solid #111;
-    margin-top: 40px;
+    margin-top: 20px; /* Reducción de margen superior */
 }
 
 .footer-logo-small {
