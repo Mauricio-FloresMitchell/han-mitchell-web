@@ -140,17 +140,21 @@ h2 {
 }
 
 .logo-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
     height: auto;
-    width: 55%;
-    max-width: 100px;
-    margin-bottom: 15px;
-    image-rendering: auto;
+    display: block !important;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
+    .hero {
+        padding: 120px 0 60px;
+    }
+
     .logo-hero {
-        max-width: 80px;
-        width: auto;
+        width: 120px;
     }
 }
 
@@ -373,7 +377,6 @@ input:focus, textarea:focus {
 
 .whatsapp-float img { width: 30px; }
 
-/* POPUP */
 .popup-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -409,23 +412,28 @@ input:focus, textarea:focus {
     cursor: pointer;
 }
 
-.popup-avatar { width: 80px; margin-bottom: 15px; border-radius: 50%; }
+.popup-avatar { 
+    width: 80px; 
+    margin-bottom: 15px; 
+    border-radius: 50%; 
+
+}
 
 /* ==========================================================================
    7. FOOTER (Ajustes de espacio reducidos)
    ========================================================================== */
 .main-footer {
     text-align: center;
-    padding: 30px 20px 20px; /* Reducción de padding superior e inferior */
+    padding: 30px 20px 20px;
     border-top: 1px solid #111;
-    margin-top: 20px; /* Reducción de margen superior */
+    margin-top: 20px;
 }
 
 .footer-logo-small {
     height: 30px;
     opacity: 0.6;
     margin-bottom: 20px;
-    filter: brightness(0) invert(1); /* Lo hace blanco */
+    filter: brightness(0) invert(1);
 }
 
 .footer-socials {
