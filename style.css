@@ -261,24 +261,26 @@ h2 {
    ========================================================================== */
 .grid-layout {
     display: grid;
-    grid-template-columns: 1fr; /* 1 columna en móvil */
+    grid-template-columns: 1fr;
     gap: 40px;
 }
 
 @media (min-width: 900px) {
     .grid-layout {
-        grid-template-columns: 1.8fr 1fr; /* 2 columnas en PC */
+        grid-template-columns: 1.8fr 1fr;
     }
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 25px;
 }
 
-@media (min-width: 600px) {
-    .projects-grid { grid-template-columns: 1fr 1fr; }
+@media (min-width: 900px) {
+    .projects-grid { 
+        grid-template-columns: 1fr 1fr; 
+    }
 }
 
 .project-card {
@@ -289,29 +291,131 @@ h2 {
     text-decoration: none;
     color: inherit;
     transition: var(--transition);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.project-card:hover {
+.project-card:not(.cta-card):hover {
     border-color: var(--brand-orange);
     transform: translateY(-5px);
 }
 
 .card-image-placeholder {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
     background: #080808;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
 }
 
 .project-img {
-    width: 100%; height: 100%; object-fit: cover;
-    opacity: 0.6; transition: var(--transition);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.8;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    image-rendering: -webkit-optimize-contrast;
 }
 
-.project-card:hover .project-img { opacity: 1; }
+.project-card:hover .project-img {
+    opacity: 1;
+    transform: scale(1.1);
+}
 
+.project-tags {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Importante para móvil */
+}
+
+.tech-tag {
+    font-size: 0.6rem;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid transparent;
+}
+
+/* Diferenciación de Tags (Sutil, nivel Senior) */
+.tag-type {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.tag-stack {
+    color: var(--brand-orange);
+    background: rgba(255, 157, 42, 0.1);
+    border-color: rgba(255, 157, 42, 0.2);
+}
+
+.tag-platform {
+    color: var(--brand-cyan);
+    background: rgba(20, 205, 184, 0.1);
+    border-color: rgba(20, 205, 184, 0.2);
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: var(--font-headings);
+    line-height: 1.2;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.btn-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--brand-orange);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: auto;
+}
+
+/* Tarjeta CTA (Cierre) al tamaño estándar */
+.cta-card {
+    border: 2px dashed #222;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    cursor: default;
+    background: #060606;
+}
+
+.cta-card h3 {
+    font-size: 1.6rem;
+    color: var(--brand-orange);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.cta-card p {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    color: var(--text-dim);
+    max-width: 300px;
+}
 /* ==========================================================================
    5. COMPONENTES DE CONVERSIÓN (FORMULARIO Y BOTONES)
    ========================================================================== */
@@ -552,3 +656,50 @@ input:focus, textarea:focus {
         100% { transform: translateX(calc(-200px * 4)); }
     }
 }
+
+.project-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--brand-orange);
+    background: rgba(255, 157, 42, 0.05);
+    padding: 3px 12px;
+    border: 1px solid rgba(255, 157, 42, 0.3);
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-family: var(--font-headings);
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.btn-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--brand-orange);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.project-card:hover .btn-text {
+    border-bottom: 1px solid var(--brand-orange);
+}
+
