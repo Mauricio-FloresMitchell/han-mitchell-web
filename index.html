@@ -22,7 +22,7 @@
             </div>
 
             <div class="hero-content">
-                <h1 class="dev-name">Dev Mau Flores</h1> 
+                <h1 class="dev-name" id="dev-name">Dev Mau <span id="flores-span">Flores</span></h1>
                 <p class="dev-role">Consultor Tecnológico & Programador | Streamer</p>
                 <p class="dev-slogan">PÁGINAS WEB QUE VENDEN, <span class="no-solo">NO SOLO QUE SE VEN</span></p>
 
@@ -106,28 +106,95 @@
                             <span class="btn-text">Ver Catálogo</span>
                         </a>
 
-                        <div class="project-card cta-card">
-                            <h3>¿Tu proyecto puede ser el siguiente?</h3>
-                            <p>Estoy listo para transformar tu idea en una solución tecnológica que genere resultados.</p>
-                            <a href="https://wa.me/527206073820?text=Hola%20Mau,%20tengo%20una%20idea%20para%20un%20proyecto%20y%20quiero%20cotizar." class="btn btn-primary" target="_blank">Hablemos por WhatsApp</a>
-                        </div>
+                        <div class="project-card cta-card" id="project-cta">
+                        <img src="assets/mau-pixel-wa.png" alt="Mau Flores Sticker" class="card-sticker">
+                        <h3>¿Tu proyecto puede ser el siguiente?</h3>
+                        <p>Estoy listo para transformar tu idea en una solución tecnológica que genere resultados.</p>
+                        <a href="https://wa.me/527206073820?text=Hola%20Mau,%20me%20interesa%20una%20estrategia%20o%20construir%20mi%20web." class="btn btn-primary" target="_blank">Hablemos por WhatsApp</a>
+                    </div>
                     </div>
                 </section>
                 <section class="services" style="margin-top: 40px;">
-                    <h2>Mis Servicios & Paquetes</h2>
+                    <h2>Mis Servicios</h2>
                     <div class="projects-grid">
+                        <!-- Tarjeta 1: Web -->
                         <article class="project-card">
-                            <h3>Desarrollo Web Pro</h3>
-                            <p>Sitios de alta conversión optimizados para ventas y SEO.</p>
-                            <span class="tech-tag">Desde $XXX MXN</span>
+                            <div class="project-tags">
+                                <span class="tech-tag tag-platform">Conversión</span>
+                                <span class="tech-tag tag-stack">Garantía</span>
+                            </div>
+                            <h3>Desarrollo Web Profesional</h3>
+                            <p>Landing pages y sitios corporativos diseñados para vender, no solo para verse bien.</p>
+                            <button class="btn btn-primary" onclick="verServicio('web')" style="width: 100%; margin-top: auto;">Ver detalles</button>
                         </article>
+                        <!-- Tarjeta 2: Hosting -->
                         <article class="project-card">
-                            <h3>Automatización IA</h3>
-                            <p>Optimización de flujos de trabajo y bots de prospección.</p>
-                            <span class="tech-tag">Consultar Presupuesto</span>
+                            <div class="project-tags">
+                                <span class="tech-tag tag-type">Infraestructura</span>
+                            </div>
+                            <h3>Hosting & Dominio</h3>
+                            <p>Configuración de servidores y registro de marca. Tu sitio al aire sin complicaciones.</p>
+                            <button class="btn btn-primary" onclick="verServicio('hosting')" style="width: 100%; margin-top: auto;">Ver detalles</button>
+                        </article>
+                        <!-- Tarjeta 3: Mantenimiento -->
+                        <article class="project-card">
+                            <div class="project-tags">
+                                <span class="tech-tag tag-stack">Recurrente</span>
+                            </div>
+                            <h3>Soporte & Mantenimiento</h3>
+                            <p>Web siempre actualizada y segura. Me encargo de los errores mientras tú vendes.</p>
+                            <button class="btn btn-primary" onclick="verServicio('mantenimiento')" style="width: 100%; margin-top: auto;">Ver detalles</button>
+                        </article>
+                        <!-- Tarjeta 4: IA -->
+                        <article class="project-card">
+                            <div class="project-tags">
+                                <span class="tech-tag tag-platform">Innovación</span>
+                            </div>
+                            <h3>Automatización con IA</h3>
+                            <p>Chatbots y flujos inteligentes que ahorran horas de trabajo manual en tu negocio.</p>
+                            <button class="btn btn-primary" onclick="verServicio('ia')" style="width: 100%; margin-top: auto;">Ver detalles</button>
                         </article>
                     </div>
-                </section>
+                </section>    
+                <section class="packages-section" style="margin-top: 40px; margin-bottom: 60px;">
+        <h2>📦 Paquetes de Inversión</h2>
+        <div class="projects-grid">
+            
+            <!-- Paquete Básico -->
+            <article class="project-card package-card" onclick="verPaquete('basic')">
+                <div class="project-tags">
+                    <span class="tech-tag tag-type">🟢 Inicial</span>
+                </div>
+                <h3>Presencia Online</h3>
+                <p>Perfecto para emprendedores que necesitan verse profesionales rápidamente.</p>
+                <div class="garantia-badge" onclick="event.stopPropagation(); verGarantia('standard')">🛡️ Garantía Incluida</div>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 15px;">Ver detalles</button>
+            </article>
+
+            <!-- Paquete Pro -->
+            <article class="project-card package-card" onclick="verPaquete('pro')">
+                <div class="project-tags">
+                    <span class="tech-tag tag-stack">🔵 Crecimiento</span>
+                </div>
+                <h3>Estrategia Profesional</h3>
+                <p>Para negocios establecidos que buscan atraer más clientes potenciales.</p>
+                <div class="garantia-badge" onclick="event.stopPropagation(); verGarantia('standard')">🛡️ Garantía Incluida</div>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 15px;">Ver detalles</button>
+            </article>
+
+            <!-- Paquete Premium -->
+            <article class="project-card package-card" onclick="verPaquete('premium')">
+                <div class="project-tags">
+                    <span class="tech-tag tag-platform">🟣 Escalabilidad</span>
+                </div>
+                <h3>Ventas e IA Premium</h3>
+                <p>Ideal para negocios que buscan vender online y automatizar con IA.</p>
+                <div class="garantia-badge highlight" onclick="event.stopPropagation(); verGarantia('extendida')">🛡️ 90 Días de Garantía</div>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 15px;">Ver detalles</button>
+            </article>
+
+        </div>
+    </section>           
             </div>
 
             <aside class="sidebar">
@@ -136,12 +203,22 @@
                     <form action="#" class="minimal-form">
                         <input type="email" placeholder="tu@correo.com" required>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Inscribirme</button>
+                        <div id="newsletter-confirm" class="newsletter-confirm-inline"></div>
                     </form>
                 </section>
 
                 <section class="cursos" style="margin-top: 30px;">
                     <h2>Cursos</h2>
-                    <div class="curso-placeholder">Desarrollo Backend - Próximamente</div>
+                    <div class="project-card cta-card curso-placeholder">
+                        <div class="curso-header">
+                            <img src="assets/mau-pixel-curso.png" alt="Mau Flores Curso" class="card-sticker-inline">
+                            <div class="curso-text-content">
+                                <h3>Próximamente</h3>
+                                <p>De momento no hay cursos disponibles, pero suscríbete al newsletter para recibir la información.</p>
+                            </div>
+                        </div>
+                        <a href="https://www.youtube.com/@dev_mflores" target="_blank" class="btn btn-primary btn-youtube" style="width: 100%; margin-top: 15px;">Ver contenido en YouTube</a>
+                    </div>
                 </section>
 
                 <section class="youtube-section" style="margin-top: 30px;">
@@ -151,8 +228,16 @@
                         <p>Mira mis últimos tutoriales y consejos de estrategia tech.</p>
                     </div>
                 </section>
-            </aside>
 
+                <section class="twitch-section" style="margin-top: 30px;">
+                    <h2>Directos en Twitch</h2>
+                    <div class="video-card">
+                        <div id="twitch-embed"></div>
+                        <p>Acompáñame en vivo para jugar, platicar, compartir musica y peliculas y más.</p>
+                        <a href="https://www.twitch.tv/TU_USUARIO" target="_blank" class="btn-text">Ver canal de Twitch</a>
+                    </div>
+                </section>
+            </aside>
             <section class="experience">
                 <h2>Empresas con las que He Trabajado</h2>
                 <div class="carousel-container">
@@ -196,6 +281,7 @@
                     <input type="tel" placeholder="Teléfono">
                     <textarea placeholder="¿En qué puedo ayudarte?" rows="4"></textarea>
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
+                    <div id="contact-confirm" class="newsletter-confirm-inline contact-confirm-inline"></div>
                 </form>
                 <a href="https://wa.me/527206073820?text=Hola%20Mau,%20necesito%20ayuda%20con%20un%20proyecto%20web." class="btn btn-whatsapp-full" target="_blank">Contactar por WhatsApp</a>
             </section>
@@ -215,24 +301,91 @@
                 <span class="ia-tag">Insight del día:</span>
                 <p id="daily-insight" class="daily-text">Analizando tendencias tecnológicas...</p>
             </div>
-            <p class="copyright">&copy; 2026 • Dev | Mau Flores</p>
+            <p class="copyright">&copy; 2026 • Han Mitchell / Mau Flores</p>
         </footer>
     </main>
 
-    <a href="https://wa.me/527206073820?text=Hola%20Mau,%20vi%20tu%20web%20y%20quiero%20hacerte%20una%20consulta." class="whatsapp-float" target="_blank">
-        <img src="assets/icon-whatsapp-white.svg" alt="WhatsApp">
-    </a>
+        <div class="whatsapp-container" id="wa-container">
+            <a href="https://wa.me/527206073820" class="whatsapp-float" target="_blank">
+                <img src="assets/icon-whatsapp-white.svg" alt="WhatsApp">
+            </a>
+            <img src="assets/mau-pixel-flot.png" class="card-sticker-wa">
+            <div id="wa-bubble" class="wa-bubble">¡Sí, hazlo! Envíame mensaje ya</div>
+        </div>
 
     <div id="popup-overlay" class="popup-overlay">
-        <div class="popup-content">
-            <button id="popup-close" class="popup-close">&times;</button>
-            <img src="assets/logo-fm.png" alt="Mau Flores" class="popup-avatar">
-            <h3>¿Listo para escalar?</h3>
-            <p>Hablemos por WhatsApp y definamos la estrategia tecnológica para tu negocio.</p>
-            <a href="https://wa.me/527206073820?text=Hola%20Mau,%20vi%20tu%20pop-up%20y%20me%20interesa%20tu%20consultor%C3%ADa." class="btn btn-whatsapp-full" target="_blank">Chat Directo</a>
-        </div>
+    <div class="popup-content">
+        <button id="popup-close" class="popup-close">&times;</button>
+        
+        <img src="assets/mau-pixel-avatar.png" alt="Mau Flores Pixel" class="popup-avatar">
+        
+        <h3>Hey, ¿estás atorado?</h3>
+        <p>Hablemos por WhatsApp. Cuéntame tu idea y definamos la mejor estrategia tecnológica.</p>
+        
+        <a href="https://wa.me/527206073820?text=Hola%20Mau,%20me%20interesa%20una%20estrategia%20o%20construir%20mi%20web." class="btn btn-whatsapp-full" target="_blank">Chat Directo</a>
     </div>
+        </div>
 
-    <script src="script.js"></script>
+            <script src="script.js"></script>
+        <div id="modal-servicio" class="popup-overlay">
+            <div class="popup-content" style="text-align: left; max-width: 500px;">
+                <button onclick="cerrarServicio()" class="popup-close">&times;</button>
+                <h3 id="modal-titulo" style="color: var(--brand-orange);"></h3>
+                <p id="modal-descripcion" style="margin: 15px 0;"></p>
+                <ul id="modal-lista" style="margin-bottom: 25px; color: var(--text-dim);"></ul>
+                <a id="modal-whatsapp" href="#" class="btn btn-whatsapp-full" target="_blank">Pedir por WhatsApp</a>
+            </div>
+        </div>
+
+        <div id="modal-garantia" class="popup-overlay">
+            <div class="popup-content garantia-layout">
+                <button onclick="cerrarGarantia()" class="popup-close">&times;</button>
+                <div class="garantia-header">
+                    <h3 id="garantia-titulo"></h3>
+                    <span id="garantia-subtitulo"></span>
+                </div>
+                
+                <div class="garantia-body">
+                    <div class="garantia-section">
+                        <h4 class="verde-tech">✅ ¿Qué cubre?</h4>
+                        <ul id="garantia-cubre"></ul>
+                    </div>
+                    
+                    <div class="garantia-section">
+                        <h4 class="rojo-soft">❌ ¿Qué NO incluye?</h4>
+                        <ul id="garantia-no-incluye"></ul>
+                    </div>
+
+                    <div class="garantia-condiciones">
+                        <p><strong>Condiciones:</strong></p>
+                        <ul id="garantia-meta"></ul>
+                    </div>
+                </div>
+                
+                <div class="garantia-footer">
+                    <p id="garantia-tip"></p>
+                </div>
+            </div>
+        </div>
+<div id="toast-notif" class="toast-container">
+    <div class="toast-content">
+        <p id="toast-message"></p>
+    </div>
+</div>
+<div id="modal-confirmacion" class="popup-overlay confirm-overlay">
+    <div class="popup-content confirm-layout">
+        <button onclick="cerrarConfirmacion()" class="popup-close">&times;</button>
+        
+        <div class="confirm-avatar-container">
+            <img src="assets/mau-pixel-avatar.png" alt="Mau Validando" class="confirm-avatar">
+        </div>
+        
+        <h3 id="confirm-titulo"></h3>
+        
+        <p id="confirm-mensaje"></p>
+        
+        <button onclick="cerrarConfirmacion()" class="btn btn-primary" id="confirm-btn">Entendido</button>
+    </div>
+</div>
 </body>
 </html>
