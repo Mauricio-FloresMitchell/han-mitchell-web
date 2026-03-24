@@ -1,15 +1,12 @@
-/* ==========================================================================
-   1. VARIABLES Y CONFIGURACIÓN BASE
-   ========================================================================== */
 :root {
     --bg-color: #000000;
     --card-bg: #0c0d0d;
     --text-main: #ffffff;
     --text-dim: #999999;
     
-    --brand-orange: #ff9d2a; /* Naranja fuego */
-    --brand-cyan: #14cdb8;   /* Cian tecnológico */
-    --brand-green-wa: #25d366; /* Verde WhatsApp */
+    --brand-orange: #ff9d2a; 
+    --brand-cyan: #14cdb8;   
+    --brand-green-wa: #25d366; 
     
     --font-main: 'Inter', sans-serif;
     --font-headings: 'Oswald', sans-serif;
@@ -35,7 +32,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- Estilo para la textura de fondo (Ajuste Verde Halftone) --- */
 .texture-overlay {
     position: fixed;
     top: 0;
@@ -58,9 +54,6 @@ body {
     z-index: 10;
 }
 
-/* ==========================================================================
-   2. TIPOGRAFÍA RESPONSIVA POTENCIADA (Para alto contraste)
-   ========================================================================== */
 h1, h2, h3 {
     font-family: var(--font-headings);
     text-transform: uppercase;
@@ -102,12 +95,9 @@ h2 {
     text-shadow: 0 1px 3px rgba(0,0,0,0.9);
 }
 
-/* ==========================================================================
-   3. HERO SECTION (FLEXBOX RESPONSIVO)
-   ========================================================================== */
 .hero {
     display: flex;
-    flex-direction: column; /* Apilado en móvil */
+    flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 30px;
@@ -256,9 +246,6 @@ h2 {
     .bio { margin: 0 0 30px 0; }
 }
 
-/* ==========================================================================
-   4. GRID DE CONTENIDO (PROYECTOS Y SIDEBAR)
-   ========================================================================== */
 .grid-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -331,7 +318,7 @@ h2 {
     display: flex;
     gap: 6px;
     margin-bottom: 15px;
-    flex-wrap: wrap; /* Importante para móvil */
+    flex-wrap: wrap; 
 }
 
 .tech-tag {
@@ -344,7 +331,6 @@ h2 {
     border: 1px solid transparent;
 }
 
-/* Diferenciación de Tags (Sutil, nivel Senior) */
 .tag-type {
     color: #fff;
     background: rgba(255, 255, 255, 0.05);
@@ -390,7 +376,6 @@ h2 {
     margin-top: auto;
 }
 
-/* Tarjeta CTA (Cierre) al tamaño estándar */
 .cta-card {
     border: 2px dashed #222;
     text-align: center;
@@ -416,9 +401,7 @@ h2 {
     color: var(--text-dim);
     max-width: 300px;
 }
-/* ==========================================================================
-   5. COMPONENTES DE CONVERSIÓN (FORMULARIO Y BOTONES)
-   ========================================================================== */
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -465,9 +448,6 @@ input:focus, textarea:focus {
     outline: none;
 }
 
-/* ==========================================================================
-   6. ELEMENTOS FLOTANTES Y POPUP RESPONSIVO
-   ========================================================================== */
 .whatsapp-float {
     position: fixed;
     bottom: 20px; right: 20px;
@@ -517,15 +497,14 @@ input:focus, textarea:focus {
 }
 
 .popup-avatar { 
-    width: 80px; 
-    margin-bottom: 15px; 
-    border-radius: 50%; 
-
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px; 
+    border-radius: 0; 
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
-/* ==========================================================================
-   7. FOOTER (Ajustes de espacio reducidos)
-   ========================================================================== */
 .main-footer {
     text-align: center;
     padding: 30px 20px 20px;
@@ -558,7 +537,6 @@ input:focus, textarea:focus {
     transform: translateY(-3px);
 }
 
-/* Contenedor del Mensaje IA */
 .ia-message-container {
     background: #080808;
     border: 1px dashed #222;
@@ -703,3 +681,603 @@ input:focus, textarea:focus {
     border-bottom: 1px solid var(--brand-orange);
 }
 
+#twitch-embed {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-bottom: 1px solid #1a1a1a; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#twitch-embed iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+    display: block;
+}
+
+.twitch-section h2 {
+    color: #a970ff;
+    border-left: 4px solid #a970ff;
+}
+
+#project-cta {
+    position: relative;
+    overflow: visible !important;
+}
+
+.card-sticker {
+    position: absolute;
+    bottom: -15px;
+    right: -10px;
+    width: 82px;
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    z-index: 5; 
+    transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+#project-cta:hover .card-sticker {
+    transform: rotate(8deg) scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .card-sticker {
+        width: 60px;
+        bottom: -10px;
+        right: -5px;
+    }
+}
+
+.curso-placeholder {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.curso-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-sticker-inline {
+    width: 70px;
+    height: auto;
+    box-shadow: none !important;
+    image-rendering: pixelated;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.btn-youtube {
+    background-color: #ff0000 !important;
+    color: #ffffff !important;
+    border: none !important;
+    transition: all 0.3s ease;
+}
+
+.btn-youtube:hover {
+    background-color: #cc0000 !important;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    transform: scale(1.02);
+}
+
+.curso-text-content {
+    flex: 1;
+}
+
+.curso-placeholder h3 {
+    font-size: 1.1rem;
+    margin: 0 0 5px 0;
+    color: var(--brand-orange);
+}
+
+.curso-placeholder p {
+    font-size: 0.8rem;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.curso-placeholder:hover .card-sticker-inline {
+    transform: scale(1.1);
+}
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 35px; 
+    right: 25px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-float {
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    z-index: 10;
+    position: relative;
+}
+
+.card-sticker-wa {
+    position: absolute;
+    right: 75px;
+    bottom: 0;
+    width: 65px;
+    height: auto;
+    image-rendering: pixelated;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    pointer-events: none;
+    z-index: 5;
+}
+
+.wa-bubble {
+    position: absolute;
+    right: 145px;
+    bottom: 15px;
+    background: #fff;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.wa-bubble::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #fff;
+}
+
+.whatsapp-container:hover .card-sticker-wa {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.whatsapp-container:hover .wa-bubble {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+#dev-name {
+    display: inline-block;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+#dev-name:hover {
+    transform: scale(1.01);
+    text-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+}
+
+#flores-span {
+    position: relative;
+    cursor: pointer;
+}
+
+.mau-sentado-sticker {
+    position: absolute;
+    bottom: 0.4em;
+    right: -10%;
+    
+
+    width: 1.3em;
+    height: auto;
+    
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    z-index: 10;
+}
+
+#flores-span:hover .mau-sentado-sticker {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+#modal-servicio {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 99999; 
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-servicio.active {
+    display: flex !important;
+}
+
+.packages-section {
+    width: 100%;
+    display: block;
+    clear: both; 
+}
+
+.garantia-badge {
+    background: rgba(255, 157, 42, 0.1);
+    border: 1px dashed var(--brand-orange);
+    color: var(--brand-orange);
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.garantia-badge.highlight {
+    background: var(--brand-orange);
+    color: #000;
+    border: none;
+    box-shadow: 0 0 15px rgba(255, 157, 42, 0.3);
+}
+
+.garantia-layout {
+    border: 2px solid #00ff00 !important;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
+    background: #050505 !important;
+    max-width: 550px !important;
+}
+
+.garantia-header h3 {
+    color: #00ff00;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+#garantia-subtitulo {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.verde-tech { color: #00ff00; margin-bottom: 10px; text-transform: uppercase; font-size: 0.9rem; }
+.rojo-soft { color: #ff4444; margin-bottom: 10px; text-transform: uppercase; font-size: 0.9rem; }
+
+.garantia-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.garantia-section li { margin-bottom: 6px; color: #eee; }
+
+.garantia-condiciones {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.garantia-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #222;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #00ff00;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.popup-content {
+    background: #0c0d0d;
+    border: 1px solid #222;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    position: relative;
+}
+
+.garantia-layout {
+    border: 2px solid #00ff00 !important;
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.2);
+    max-width: 550px;
+}
+
+.garantia-header h3 {
+    color: #00ff00;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.verde-tech { color: #00ff00; font-weight: bold; }
+.rojo-soft { color: #ff4444; font-weight: bold; }
+
+#modal-lista, #garantia-cubre, #garantia-no-incluye, #garantia-meta {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+#modal-lista li, #garantia-cubre li, #garantia-no-incluye li, #garantia-meta li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.popup-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+:root {
+    --poison-green: #00ff00;
+    --poison-green-glow: rgba(0, 255, 0, 0.4);
+}
+
+.garantia-badge {
+    background: rgba(0, 255, 0, 0.05) !important;
+    border: 2px solid var(--poison-green) !important;
+    color: var(--poison-green) !important;
+    padding: 12px;
+    text-align: center;
+    font-weight: 800;
+    margin-top: auto;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+    animation: neonPulse 2s infinite ease-in-out;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.garantia-badge.highlight {
+    background: var(--poison-green-glow) !important;
+    color: #000 !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 0 15px var(--poison-green);
+}
+
+.garantia-badge:hover {
+    transform: scale(1.03) translateY(-2px);
+    box-shadow: 0 0 25px var(--poison-green), 0 0 10px rgba(255, 255, 255, 0.3);
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
+.garantia-badge:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 40px var(--poison-green), 0 0 20px #ffffff;
+    transition: 0.1s;
+}
+
+@keyframes neonPulse {
+    0% { box-shadow: 0 0 5px var(--poison-green), 0 0 2px var(--poison-green-glow); }
+    50% { box-shadow: 0 0 15px var(--poison-green), 0 0 5px var(--poison-green-glow); }
+    100% { box-shadow: 0 0 5px var(--poison-green), 0 0 2px var(--poison-green-glow); }
+}
+
+.toast-container {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #0c0d0d;
+    border: 2px solid var(--brand-orange);
+    padding: 15px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 100000;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    pointer-events: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.toast-container.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast-avatar {
+    width: 40px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.toast-content p {
+    margin: 0;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.confirm-overlay {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9); 
+    z-index: 110000; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.confirm-overlay.show {
+    display: flex !important;
+}
+
+.confirm-layout {
+    background: #050505 !important;
+    border: 2px solid var(--brand-orange) !important;
+    box-shadow: 0 0 20px rgba(255, 157, 42, 0.15);
+    max-width: 400px !important;
+    text-align: center;
+    border-radius: 16px;
+    padding: 30px 20px;
+}
+
+.confirm-avatar-container {
+    width: 60px;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+.confirm-avatar {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+#confirm-titulo {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#confirm-mensaje {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.confirm-success h3 { color: var(--brand-cyan) !important; }
+.confirm-error h3 { color: #ff4444 !important; }
+
+.newsletter-confirm-inline {
+    display: none; 
+    position: absolute;
+    bottom: -50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.95);
+    border: 2px solid #00ff00; 
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+    white-space: nowrap; 
+}
+
+.newsletter-confirm-inline.show {
+    display: flex !important;
+    animation: fadeInConfirm 0.4s ease-out;
+}
+
+.confirm-sticker-inline {
+    width: 30px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+@keyframes fadeInConfirm {
+    from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.newsletter-confirm-inline {
+    display: none; 
+    position: absolute;
+    bottom: -50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.95);
+    border: 2px solid #00ff00; 
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+    white-space: nowrap; 
+}
+
+.newsletter-confirm-inline.show {
+    display: flex !important;
+    animation: fadeInConfirm 0.4s ease-out;
+}
+
+.confirm-sticker-inline {
+    width: 30px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+@keyframes fadeInConfirm {
+    from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.contact-confirm-inline {
+    bottom: -60px;
+}
