@@ -271,19 +271,3 @@ function showToast(mensaje) {
 
     const samSticker = document.getElementById('sam-sticker');
     const valueSection = document.querySelector('.value-proposition');
-
-function cerrarGarantia() {
-    const modal = document.getElementById('modal-garantia');
-    if(modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Devuelve el scroll a la página
-    }
-}
-
-// Cerrar al tocar fuera de la caja blanca
-window.onclick = function(event) {
-    const modalGar = document.getElementById('modal-garantia');
-    const modalServ = document.getElementById('modal-servicio');
-    if (event.target == modalGar) cerrarGarantia();
-    if (event.target == modalServ) modalServ.style.display = 'none';
-};
