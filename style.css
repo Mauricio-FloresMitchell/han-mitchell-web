@@ -1544,3 +1544,9 @@ body.modal-open {
         width: 100px;
     }
 }
+
+/* --- SECCIÓN: ESTADO DE MODAL ACTIVO --- */
+body.modal-open {
+    overflow: hidden !important;
+    height: 100vh !important;
+}
