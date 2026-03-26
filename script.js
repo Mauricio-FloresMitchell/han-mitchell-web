@@ -296,3 +296,50 @@ window.addEventListener('click', (e) => {
     if (e.target === modalGar) cerrarGarantia();
     if (e.target === modalServ) cerrarServicio();
 });
+
+/* --- SECCIÓN: CIERRE DE MODALES Y LIBERACIÓN DE SCROLL --- */
+
+function liberarScroll() {
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = 'auto'; 
+    document.body.style.height = 'auto';
+}
+
+function cerrarGarantia() {
+    const modal = document.getElementById('modal-garantia');
+    if (modal) {
+        modal.style.display = 'none';
+        liberarScroll();
+    }
+}
+
+function cerrarServicio() {
+    const modal = document.getElementById('modal-servicio');
+    if (modal) {
+        modal.style.display = 'none';
+        liberarScroll();
+    }
+}
+
+/* --- SECCIÓN: CIERRE AL TOCAR FUERA DEL MODAL --- */
+window.addEventListener('click', (e) => {
+    const modalGar = document.getElementById('modal-garantia');
+    const modalServ = document.getElementById('modal-servicio');
+    const modalConf = document.getElementById('modal-confirmacion');
+    const popupOverlay = document.getElementById('popup-overlay');
+
+    if (e.target === modalGar) cerrarGarantia();
+    if (e.target === modalServ) cerrarServicio();
+    
+    if (e.target === modalConf) {
+        modalConf.classList.remove('show');
+        modalConf.style.display = 'none';
+        liberarScroll();
+    }
+
+    if (e.target === popupOverlay) {
+        popupOverlay.classList.remove('show');
+        popupOverlay.style.display = 'none';
+        liberarScroll();
+    }
+});
