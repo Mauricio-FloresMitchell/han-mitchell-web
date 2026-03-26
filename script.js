@@ -241,33 +241,58 @@ function showToast(mensaje) {
 }
 
 // --- STIKER MAS VENDIDO ---
-    const bestSellerCard = document.getElementById('best-seller-card');
-    const mauColgado = document.getElementById('mau-colgado');
+const bestSellerCard = document.getElementById('best-seller-card');
+const mauColgado = document.getElementById('mau-colgado');
 
-    if (bestSellerCard && mauColgado) {
-            const mostrarMau = () => {
-            mauColgado.style.opacity = '1';
-            mauColgado.style.top = '-80px'; 
-            mauColgado.style.right = '-25px';
-            mauColgado.style.filter = 'drop-shadow(0 0 15px rgba(20, 205, 184, 0.9))';
-        };
+if (bestSellerCard && mauColgado) {
+    const activarMau = () => {
+        mauColgado.style.opacity = '1';
+        mauColgado.style.top = '-80px';
+        mauColgado.style.filter = 'drop-shadow(0 0 15px rgba(20, 205, 184, 0.9))';
+    };
 
-        const ocultarMau = () => {
-            mauColgado.style.opacity = '0';
-            mauColgado.style.top = '-60px'; 
-        };
+    const desactivarMau = () => {
+        mauColgado.style.opacity = '0';
+        mauColgado.style.top = '-60px';
+        mauColgado.style.filter = 'drop-shadow(0 0 0 rgba(20, 205, 184, 0))';
+    };
 
-        bestSellerCard.addEventListener('mouseenter', mostrarMau);
-        bestSellerCard.addEventListener('mouseleave', ocultarMau);
+    const esTactil = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-        bestSellerCard.addEventListener('click', () => {
-            if (mauColgado.style.opacity === '1') {
-                ocultarMau();
-            } else {
-                mostrarMau();
-            }
+    if (esTactil) {
+        bestSellerCard.addEventListener('touchstart', activarMau);
+        window.addEventListener('touchend', (e) => {
+            if (!bestSellerCard.contains(e.target)) desactivarMau();
         });
+        window.addEventListener('touchmove', desactivarMau);
+    } else {
+        bestSellerCard.addEventListener('mouseenter', activarMau);
+        bestSellerCard.addEventListener('mouseleave', desactivarMau);
     }
+}
 
     const samSticker = document.getElementById('sam-sticker');
     const valueSection = document.querySelector('.value-proposition');
+/* --- SECCIÓN: LÓGICA DE MODALES --- */
+function cerrarGarantia() {
+    const modal = document.getElementById('modal-garantia');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+    }
+}
+
+function cerrarServicio() {
+    const modal = document.getElementById('modal-servicio');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+    }
+}
+
+window.addEventListener('click', (e) => {
+    const modalGar = document.getElementById('modal-garantia');
+    const modalServ = document.getElementById('modal-servicio');
+    if (e.target === modalGar) cerrarGarantia();
+    if (e.target === modalServ) cerrarServicio();
+});
