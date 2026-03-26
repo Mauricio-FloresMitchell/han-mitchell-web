@@ -13,7 +13,7 @@
     <div class="texture-overlay"></div>
 
     <main class="container">
-        
+        <!-- Hero ATENCIÓN -->        
         <section class="hero">
             <img src="assets/logo-fm.png" alt="Logo FM" class="logo-hero">
 
@@ -24,7 +24,7 @@
             <div class="hero-content">
                 <h1 class="dev-name" id="dev-name">Dev Mau <span id="flores-span">Flores</span></h1>
                 <p class="dev-role">Consultor Tecnológico & Programador | Streamer</p>
-                <p class="dev-slogan">PÁGINAS WEB QUE VENDEN, <span class="no-solo">NO SOLO QUE SE VEN</span></p>
+                <p class="dev-slogan">ATRAE MÁS CLIENTES Y <span class="no-solo">AUTOMATIZA TU NEGOCIO</span></p>
 
                 <nav class="social-links">
                     <a href="https://www.youtube.com/@dev_mflores" target="_blank" class="social-icon"><img src="assets/icon-youtube.svg" alt="YouTube"></a>
@@ -38,13 +38,124 @@
                 </nav>
 
                 <p class="bio">
-                    <strong>Sobre mí:</strong> Ayudo a emprendedores y empresas a construir presencia digital de alto impacto. Especializado en desarrollo web full-stack, automatización y estrategias de conversión.
+                    <strong>¿Qué hago?</strong> Desarrollo webs y sistemas que convierten visitas en ventas sin complicaciones técnicas. Especializado en escalar negocios con tecnología de alto impacto.
                 </p>
 
-                <a href="https://wa.me/527206073820?text=Hola%20Mau,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20agendar%20una%20consultor%C3%ADa%20t%C3%A9cnica." class="btn btn-primary" target="_blank">Agenda una consulta Gratuita</a>
+                <a href="https://wa.me/527206073820?text=Hola%20Mau,%20quiero%20conseguir%20m%C3%A1s%20clientes%20para%20mi%20negocio." class="btn btn-primary" target="_blank">Quiero más clientes</a>
             </div>
         </section>
 
+        <!-- SECCIÓN DE PAQUETES -->
+        <section class="packages-section" id="paquetes" style="margin-top: -20px; margin-bottom: 40px; padding: 0 20px;">
+            <div style="text-align: center; margin-bottom: 25px;">
+                <h2 style="border: none; justify-content: center; display: flex; color: var(--brand-orange); font-size: 2rem; margin-bottom: 5px;">📦 Paquetes</h2>
+                <p style="color: var(--text-dim); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Soluciones a la medida para escalar los resultados de tu negocio.</p>
+            </div>
+
+            <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: stretch; gap: 25px;">
+                
+                <!-- Paquete 1: Presencia Online -->
+                <div class="package-wrapper" style="display: flex; flex-direction: column; margin-top: 15px;">
+                    <article class="project-card" style="display: flex; flex-direction: column; flex-grow: 1; height: 100%;">
+                        <div class="project-tags" style="justify-content: space-between; align-items: center; width: 100%;">
+                            <span class="tech-tag tag-type">🟢 Presencia Online</span>
+                        </div>
+                        <p style="font-size: 0.95rem; color: #fff; margin-bottom: 10px; min-height: 45px;">Ideal para negocios que necesitan verse profesionales</p>
+                        <h3 style="color: var(--brand-orange); font-size: 1.8rem; margin-bottom: 20px;">Desde $5,000 MXN</h3>
+                        
+                        <ul style="list-style: none; padding: 0; margin-bottom: 20px; flex-grow: 1; color: var(--text-dim); font-size: 0.95rem;">
+                            <li style="margin-bottom: 10px;">✅ Landing page</li>
+                            <li style="margin-bottom: 10px;">✅ WhatsApp directo</li>
+                            <li style="margin-bottom: 10px;">✅ Formulario de contacto</li>
+                            <li style="margin-bottom: 10px;">✅ Seguridad básica</li>
+                        </ul>
+                        <div class="garantia-badge" onclick="verGarantia('standard')">🛡️ Garantía Incluida</div>
+                        <a href="https://wa.me/527206073820?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20el%20paquete%20de%20Presencia%20Online" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Empezar mi web profesional</a>
+                    </article>
+                </div>
+
+                <!-- Paquete 2: Generación de Clientes (RECOMENDADO) -->
+                <div id="best-seller-wrapper" style="position: relative; margin-top: 15px; display: flex; flex-direction: column;">   
+                    <img src="assets/mau-pixel-colgado.png" id="mau-colgado" alt="Mau Asomándose" 
+                        style="position: absolute; top: -40px; right: -20px; z-index: 0; pointer-events: none; opacity: 0; transition: all 0.4s ease-in-out; width: 130px; height: auto; filter: drop-shadow(0 0 0 rgba(20, 205, 184, 0)); transform: rotate(0deg);">
+                    
+                    <article id="best-seller-card" class="project-card package-card" 
+                            style="display: flex; flex-direction: column; border: 2px solid var(--brand-cyan); position: relative; z-index: 2; overflow: visible; background: #0c0d0d; flex-grow: 1; margin: 0; height: 100%;">
+                    
+                        <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--brand-cyan); color: #000; padding: 4px 16px; font-weight: 800; font-size: 0.8rem; border-radius: 20px; text-transform: uppercase; white-space: nowrap; box-shadow: 0 4px 10px rgba(20, 205, 184, 0.3); z-index: 10;">Más Vendido</div>
+                        
+                        <div class="project-tags" style="justify-content: space-between; align-items: center; width: 100%;">
+                            <span class="tech-tag tag-platform">🔵 Generación de Clientes</span>
+                        </div>
+                        <h3 style="color: var(--brand-cyan); font-size: 1.8rem; margin-bottom: 5px;">Generación de Clientes</h3>
+                        <p style="min-height: 45px; font-size: 0.95rem; color: #fff; margin-bottom: 10px;">Para negocios que quieren atraer prospectos y recibir pedidos de forma constante.</p>
+                        
+                        <ul style="list-style: none; padding: 0; margin-bottom: 20px; flex-grow: 1; color: var(--text-dim); font-size: 0.9rem;">
+                            <li style="margin-bottom: 8px;">✅ Todo lo del paquete Presencia</li>
+                            <li style="margin-bottom: 8px;">✅ SEO Básico para Google</li>
+                            <li style="margin-bottom: 8px;">✅ Sistema de pedidos simples</li>
+                            <li style="margin-bottom: 8px;">✅ Captura de clientes (Leads)</li>
+                            <li style="margin-bottom: 8px;">✅ WhatsApp automatizado básico</li>
+                        </ul>
+                        <div class="garantia-badge" onclick="verGarantia('standard')">🛡️ Garantía Incluida</div>
+                        <a href="https://wa.me/527206073820?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20el%20paquete%20de%20Generaci%C3%B3n%20de%20Clientes" 
+                        target="_blank" class="btn btn-primary" 
+                        style="width: 100%; margin-top: 15px; background-color: var(--brand-cyan); color: #000; box-shadow: 0 0 15px rgba(20, 205, 184, 0.2);">Quiero vender más</a>
+                    </article>
+                </div>
+
+                <!-- Paquete 3: Automatización -->
+                <div class="package-wrapper" style="display: flex; flex-direction: column; margin-top: 15px;">
+                    <article class="project-card" style="display: flex; flex-direction: column; flex-grow: 1; height: 100%;">
+                        <div class="project-tags" style="justify-content: space-between; align-items: center; width: 100%;">
+                            <span class="tech-tag tag-stack" style="color: #b567ff; border-color: rgba(181, 103, 255, 0.3); background: rgba(181, 103, 255, 0.1);">🟣 Automatización y Ventas</span>
+                        </div>
+                        <p style="font-size: 0.95rem; color: #fff; margin-bottom: 10px; min-height: 45px;">Para negocios que quieren automatizar y escalar</p>
+                        <h3 style="color: #b567ff; font-size: 1.8rem; margin-bottom: 20px;">Desde $15,000 MXN</h3>
+                        
+                        <ul style="list-style: none; padding: 0; margin-bottom: 20px; flex-grow: 1; color: var(--text-dim); font-size: 0.95rem;">
+                            <li style="margin-bottom: 10px;">✅ Automatización</li>
+                            <li style="margin-bottom: 10px;">✅ Chatbot básico</li>
+                            <li style="margin-bottom: 10px;">✅ Integraciones</li>
+                            <li style="margin-bottom: 10px;">✅ Base de datos de clientes</li>
+                        </ul>
+                        <div class="garantia-badge highlight" onclick="verGarantia('extendida')">🛡️ 90 Días de Garantía</div>
+                        <a href="https://wa.me/527206073820?text=Hola%20Mau,%20busco%20automatizar%20mis%20ventas%20con%20el%20paquete%20Premium" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 15px; background: rgba(181, 103, 255, 0.1); color: #b567ff; border: 1px solid rgba(181, 103, 255, 0.3);">Escalar mi operación</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- SECCIÓN VALOR -->
+        <section class="value-proposition" style="text-align: center; margin-bottom: 50px; padding: 40px 20px; background: rgba(255, 157, 42, 0.03); border-top: 1px solid rgba(255, 157, 42, 0.1); border-bottom: 1px solid rgba(255, 157, 42, 0.1); position: relative; overflow: visible;">
+            
+            <img src="assets/mau-pixel-sam.png" id="sam-static-left" class="sam-responsive-sticker" alt="Mau Pixel Sam">
+
+            <div class="value-text-content">
+                <h2 style="border: none; margin-bottom: 15px; color: var(--brand-orange); font-size: 1.5rem; justify-content: center; display: flex;">¿Qué problema resuelvo?</h2>
+                <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 40px; font-weight: 600; color: #fff; line-height: 1.5;">
+                    Ayudo a negocios a conseguir más clientes, automatizar su atención y mejorar su presencia digital sin complicaciones técnicas.
+                </p>
+            </div>
+            
+            <div class="process-steps" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                <div class="step" style="max-width: 200px;">
+                    <span style="font-size: 2.5rem; display: block; margin-bottom: 10px;">💬</span>
+                    <strong style="color: #fff; font-size: 1.1rem; display: block; margin-bottom: 5px;">1. Hablemos</strong>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Me cuentas tu objetivo y evaluamos si puedo ayudarte.</p>
+                </div>
+                <div class="step" style="max-width: 200px;">
+                    <span style="font-size: 2.5rem; display: block; margin-bottom: 10px;">⚙️</span>
+                    <strong style="color: #fff; font-size: 1.1rem; display: block; margin-bottom: 5px;">2. Estrategia</strong>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Diseñamos e implementamos el sistema exacto que necesitas.</p>
+                </div>
+                <div class="step" style="max-width: 200px;">
+                    <span style="font-size: 2.5rem; display: block; margin-bottom: 10px;">🚀</span>
+                    <strong style="color: #fff; font-size: 1.1rem; display: block; margin-bottom: 5px;">3. Resultados</strong>
+                    <p style="font-size: 0.9rem; color: var(--text-dim);">Ahorras tiempo y empiezas a recibir más clientes.</p>
+                </div>
+            </div>
+        </section>
+         <!-- PROYECTOS -->       
         <div class="grid-layout">
             <div class="main-content">
                 <section class="projects">
@@ -60,7 +171,7 @@
                                 <span class="tech-tag tag-platform">Web App</span>
                             </div>
                             <h3>Calculadora de Becas Académicas</h3>
-                            <p>Landing page de alta conversión para la captura masiva de prospectos. Sistema dinámico con lógica de cálculo personalizada, persistencia en base de datos y automatización de correos.</p>
+                            <p>Sistema de captura masiva que genera leads calificados las 24 horas del día. Sistema dinámico con lógica de cálculo personalizada, persistencia en base de datos y automatización de correos.</p>
                             <span class="btn-text">Ver Proyecto en Vivo</span>
                         </a>
 
@@ -88,7 +199,7 @@
                                 <span class="tech-tag tag-platform">Full Stack Web</span>
                             </div>
                             <h3>SOMA Studio</h3>
-                            <p>Plataforma web que integra un portafolio visual dinámico con un sistema avanzado de agendamiento de citas. Optimiza la gestión de clientes y la visibilidad de los tatuadores.</p>
+                            <p>Plataforma web que integra un portafolio visual dinámico con un sistema avanzado de agendamiento de citas. Libera tu agenda: Sistema de reservas automático que elimina el ida y vuelta por WhatsApp.</p>
                             <span class="btn-text">Ver Demo</span>
                         </a>
 
@@ -110,93 +221,55 @@
                         <img src="assets/mau-pixel-wa.png" alt="Mau Flores Sticker" class="card-sticker">
                         <h3>¿Tu proyecto puede ser el siguiente?</h3>
                         <p>Estoy listo para transformar tu idea en una solución tecnológica que genere resultados.</p>
-                        <a href="https://wa.me/527206073820?text=Hola%20Mau,%20me%20interesa%20una%20estrategia%20o%20construir%20mi%20web." class="btn btn-primary" target="_blank">Hablemos por WhatsApp</a>
+                        <a href="https://wa.me/527206073820?text=Hola%20Mau,%20quiero%20crear%20un%20sistema%20para%20mi%20negocio." class="btn btn-primary" target="_blank">Quiero una web que venda</a>
                     </div>
                     </div>
                 </section>
+        <!-- SERVICIOS -->
                 <section class="services" style="margin-top: 40px;">
-                    <h2>Mis Servicios</h2>
+                    <h2>Sistemas que Construyo para Ti</h2>
                     <div class="projects-grid">
-                        <!-- Tarjeta 1: Web -->
-                        <article class="project-card">
+                        
+                        <article class="project-card" style="display: flex; flex-direction: column;">
                             <div class="project-tags">
                                 <span class="tech-tag tag-platform">Conversión</span>
-                                <span class="tech-tag tag-stack">Garantía</span>
                             </div>
-                            <h3>Desarrollo Web Profesional</h3>
-                            <p>Landing pages y sitios corporativos diseñados para vender, no solo para verse bien.</p>
-                            <button class="btn btn-primary" onclick="verServicio('web')" style="width: 100%; margin-top: auto;">Ver detalles</button>
+                            <h3>Desarrollo Web</h3>
+                            <p style="flex-grow: 1;">Webs que convierten visitantes en clientes</p>
+                            <a href="https://wa.me/527206073820?text=Hola,%20Mau.%20Necesito%20una%20web%20para%20mi%20negocio." target="_blank" class="btn btn-primary" style="width: 100%; margin-top: auto;">Necesito una web que venda</a>
                         </article>
-                        <!-- Tarjeta 2: Hosting -->
-                        <article class="project-card">
+                        
+                        <article class="project-card" style="display: flex; flex-direction: column;">
                             <div class="project-tags">
-                                <span class="tech-tag tag-type">Infraestructura</span>
+                                <span class="tech-tag tag-stack">Escalabilidad</span>
                             </div>
-                            <h3>Hosting & Dominio</h3>
-                            <p>Configuración de servidores y registro de marca. Tu sitio al aire sin complicaciones.</p>
-                            <button class="btn btn-primary" onclick="verServicio('hosting')" style="width: 100%; margin-top: auto;">Ver detalles</button>
+                            <h3>Automatización</h3>
+                            <p style="flex-grow: 1;">Sistemas que trabajan solos (Vende en piloto automático)</p>
+                            <a href="https://wa.me/527206073820?text=Hola,%20Mau.%20Quiero%20automatizar%20mi%20negocio." target="_blank" class="btn btn-primary" style="width: 100%; margin-top: auto;">Quiero ahorrar tiempo ahora</a>
                         </article>
-                        <!-- Tarjeta 3: Mantenimiento -->
-                        <article class="project-card">
+                        
+                        <article class="project-card" style="display: flex; flex-direction: column;">
                             <div class="project-tags">
-                                <span class="tech-tag tag-stack">Recurrente</span>
+                                <span class="tech-tag tag-type">Eficiencia</span>
                             </div>
-                            <h3>Soporte & Mantenimiento</h3>
-                            <p>Web siempre actualizada y segura. Me encargo de los errores mientras tú vendes.</p>
-                            <button class="btn btn-primary" onclick="verServicio('mantenimiento')" style="width: 100%; margin-top: auto;">Ver detalles</button>
+                            <h3>Integraciones</h3>
+                            <p style="flex-grow: 1;">Conecta tus herramientas y elimina el trabajo manual</p>
+                            <a href="https://wa.me/527206073820?text=Hola,%20Mau.%20Necesito%20integrar%20mis%20sistemas." target="_blank" class="btn btn-primary" style="width: 100%; margin-top: auto;">Necesito conectar mis sistemas</a>
                         </article>
-                        <!-- Tarjeta 4: IA -->
-                        <article class="project-card">
+                        
+                        <article class="project-card" style="display: flex; flex-direction: column;">
                             <div class="project-tags">
-                                <span class="tech-tag tag-platform">Innovación</span>
+                                <span class="tech-tag tag-platform">Tráfico</span>
                             </div>
-                            <h3>Automatización con IA</h3>
-                            <p>Chatbots y flujos inteligentes que ahorran horas de trabajo manual en tu negocio.</p>
-                            <button class="btn btn-primary" onclick="verServicio('ia')" style="width: 100%; margin-top: auto;">Ver detalles</button>
+                            <h3>SEO Básico</h3>
+                            <p style="flex-grow: 1;">Domina Google y aparece cuando tus clientes te busquen</p>
+                            <a href="https://wa.me/527206073820?text=Hola,%20Mau.%20Quiero%20mejorar%20mi%20SEO." target="_blank" class="btn btn-primary" style="width: 100%; margin-top: auto;">Quiero aparecer en Google</a>
                         </article>
                     </div>
-                </section>    
-                <section class="packages-section" style="margin-top: 40px; margin-bottom: 60px;">
-        <h2>Paquetes</h2>
-        <div class="projects-grid">
-            
-            <!-- Paquete Básico -->
-            <article class="project-card package-card" onclick="verPaquete('basic')">
-                <div class="project-tags">
-                    <span class="tech-tag tag-type">🟢 Inicial</span>
-                </div>
-                <h3>Presencia Online</h3>
-                <p>Perfecto para emprendedores que necesitan verse profesionales rápidamente.</p>
-                <div class="garantia-badge" onclick="event.stopPropagation(); verGarantia('standard')">🛡️ Garantía Incluida</div>
-                <button class="btn btn-primary" style="width: 100%; margin-top: 15px;">Ver detalles</button>
-            </article>
+                </section>
 
-            <!-- Paquete Pro -->
-            <article class="project-card package-card" onclick="verPaquete('pro')">
-                <div class="project-tags">
-                    <span class="tech-tag tag-stack">🔵 Crecimiento</span>
-                </div>
-                <h3>Estrategia Profesional</h3>
-                <p>Para negocios establecidos que buscan atraer más clientes potenciales.</p>
-                <div class="garantia-badge" onclick="event.stopPropagation(); verGarantia('standard')">🛡️ Garantía Incluida</div>
-                <button class="btn btn-primary" style="width: 100%; margin-top: 15px;">Ver detalles</button>
-            </article>
-
-            <!-- Paquete Premium -->
-            <article class="project-card package-card" onclick="verPaquete('premium')">
-                <div class="project-tags">
-                    <span class="tech-tag tag-platform">🟣 Escalabilidad</span>
-                </div>
-                <h3>Ventas e IA Premium</h3>
-                <p>Ideal para negocios que buscan vender online y automatizar con IA.</p>
-                <div class="garantia-badge highlight" onclick="event.stopPropagation(); verGarantia('extendida')">🛡️ 90 Días de Garantía</div>
-                <button class="btn btn-primary" style="width: 100%; margin-top: 15px;">Ver detalles</button>
-            </article>
-
-        </div>
-    </section>           
             </div>
-
+        <!-- NEWSLETTER -->
             <aside class="sidebar">
                 <section class="newsletter">
                     <h2>Newsletter</h2>
@@ -206,7 +279,7 @@
                         <div id="newsletter-confirm" class="newsletter-confirm-inline"></div>
                     </form>
                 </section>
-
+        <!-- CURSOS -->
                 <section class="cursos" style="margin-top: 30px;">
                     <h2>Cursos</h2>
                     <div class="project-card cta-card curso-placeholder">
@@ -220,7 +293,7 @@
                         <a href="https://www.youtube.com/@dev_mflores" target="_blank" class="btn btn-primary btn-youtube" style="width: 100%; margin-top: 15px;">Ver contenido en YouTube</a>
                     </div>
                 </section>
-
+        <!-- YOUTUBE -->
                 <section class="youtube-section" style="margin-top: 30px;">
                     <h2>Contenido Destacado</h2>
                     <div class="video-card">
@@ -228,7 +301,7 @@
                         <p>Mira mis últimos tutoriales y consejos de estrategia tech.</p>
                     </div>
                 </section>
-
+        <!-- TWITCH -->
                 <section class="twitch-section" style="margin-top: 30px;">
                     <h2>Directos en Twitch</h2>
                     <div class="video-card">
@@ -238,6 +311,8 @@
                     </div>
                 </section>
             </aside>
+
+        <!-- EMPRESAS -->
             <section class="experience">
                 <h2>Empresas con las que He Trabajado</h2>
                 <div class="carousel-container">
@@ -271,6 +346,56 @@
                 </div>
             </section>
 
+         <!-- TESTIMONIOS -->           
+            <section class="testimonials" style="margin-top: 60px; margin-bottom: 60px;">
+            <div class="money-bag-decoration">
+                <div style="padding-top:100%;position:relative;">
+                    <img src="assets/gif-cat.gif" id="sam-static-left" class="money-bag-decoration" alt="Cat Pixel">
+                </div>
+            </div>
+                <h2>Lo que dicen mis clientes</h2>
+                <div class="testimonials-grid">
+                    
+                    <article class="project-card testimonial-card">
+                        <div class="testimonial-header">
+                            <span class="quote-icon">"</span>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="testimonial-text">"El sistema de becas que Mau desarrolló aumentó nuestra captación de prospectos en un 40%. La automatización de correos nos ahorró horas de trabajo manual cada semana."</p>
+                        <div class="testimonial-author">
+                            <strong>Universidad Imperalianz</strong>
+                            <span>Sector Educativo</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card testimonial-card">
+                        <div class="testimonial-header">
+                            <span class="quote-icon">"</span>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="testimonial-text">"Nuestra transición al catálogo digital fue impecable. Mau entendió perfectamente que necesitábamos algo rápido, visual y que no asustara a nuestros clientes habituales."</p>
+                        <div class="testimonial-author">
+                            <strong>Welt Blumen</strong>
+                            <span>E-commerce Floral</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card testimonial-card">
+                        <div class="testimonial-header">
+                            <span class="quote-icon">"</span>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p class="testimonial-text">"El sistema de agendamiento para nuestros tatuadores cambió la dinámica del estudio. Menos tiempo en WhatsApp respondiendo dudas y más tiempo tatuando."</p>
+                        <div class="testimonial-author">
+                            <strong>SOMA Studio</strong>
+                            <span>Estudio de Tatuajes</span>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        <!-- FORMULARIO -->
             <section class="contact" style="grid-column: 1 / -1;">
                 <h2>Hablemos</h2>
                 <form id="main-contact-form" class="contact-form">
@@ -283,10 +408,11 @@
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
                     <div id="contact-confirm" class="newsletter-confirm-inline contact-confirm-inline"></div>
                 </form>
-                <a href="https://wa.me/527206073820?text=Hola%20Mau,%20necesito%20ayuda%20con%20un%20proyecto%20web." class="btn btn-whatsapp-full" target="_blank">Contactar por WhatsApp</a>
+                <a href="https://wa.me/527206073820?text=Hola%20Mau,%20estoy%20listo%20para%20transformar%20mi%20negocio%20con%20tecnolog%C3%ADa." class="btn btn-whatsapp-full" target="_blank">Transformar mi negocio</a>
             </section>
         </div>
 
+        <!-- FOOTHER -->
         <footer class="main-footer">
             <div class="footer-divider"></div>
             <img src="assets/logo-fm.png" alt="Logo FM" class="footer-logo-small">
@@ -305,8 +431,9 @@
         </footer>
     </main>
 
+        <!-- FLOAT WHATSAPP -->    
         <div class="whatsapp-container" id="wa-container">
-            <a href="https://wa.me/527206073820" class="whatsapp-float" target="_blank">
+            <a href="https://wa.me/527206073820?text=Hola%20Mau,%20vengo%20de%20tu%20sitio%20web.%20Me%20interesa%20saber%20c%C3%B3mo%20puedes%20ayudarme%20a%20conseguir%20m%C3%A1s%20clientes%20y%20automatizar%20mi%20negocio." class="whatsapp-float" target="_blank">
                 <img src="assets/icon-whatsapp-white.svg" alt="WhatsApp">
             </a>
             <img src="assets/mau-pixel-flot.png" class="card-sticker-wa">
