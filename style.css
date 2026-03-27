@@ -1545,8 +1545,22 @@ body.modal-open {
     }
 }
 
-/* --- SECCIÓN: ESTADO DE MODAL ACTIVO --- */
 body.modal-open {
     overflow: hidden !important;
     height: 100vh !important;
+}
+
+#mau-colgado {
+    display: block !important; 
+    pointer-events: none; 
+    transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28) !important;
+}
+
+#best-seller-wrapper {
+    overflow: visible !important;
+    z-index: 5; 
+}
+
+#best-seller-card {
+    cursor: pointer;
 }
