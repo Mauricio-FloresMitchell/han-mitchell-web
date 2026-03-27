@@ -190,7 +190,7 @@ const garantiasData = {
         tip: "💡 Ideal para dar tranquilidad a clientes que están comenzando."
     },
     extendida: {
-        titulo: "🛡️ Garantía Extendida de 60 Días",
+        titulo: "🛡️ Garantía Extendida de 90 Días",
         sub: "(Paquetes premium)",
         cubre: ["Todo lo de 30 días", "Soporte prioritario", "Flexibilidad ajustes", "Monitoreo básico", "Corrección IA/Pagos"],
         no: ["Nuevas secciones", "Rediseños completos", "Gestión de contenido", "Marketing/SEO avanzado"],
