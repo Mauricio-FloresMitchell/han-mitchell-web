@@ -241,6 +241,7 @@ function showToast(mensaje) {
 }
 
 // --- STIKER MAS VENDIDO ---
+/* --- SECCIÓN: MICRO-INTERACCIÓN MAU COLGADO (FIX CLIC Y TOUCH) --- */
 const bestSellerCard = document.getElementById('best-seller-card');
 const mauColgado = document.getElementById('mau-colgado');
 
@@ -257,22 +258,26 @@ if (bestSellerCard && mauColgado) {
         mauColgado.style.filter = 'drop-shadow(0 0 0 rgba(20, 205, 184, 0))';
     };
 
-    const esTactil = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    // Desktop: Hover
+    bestSellerCard.addEventListener('mouseenter', activarMau);
+    bestSellerCard.addEventListener('mouseleave', desactivarMau);
 
-    if (esTactil) {
-        bestSellerCard.addEventListener('touchstart', activarMau);
-        window.addEventListener('touchend', (e) => {
-            if (!bestSellerCard.contains(e.target)) desactivarMau();
-        });
-        window.addEventListener('touchmove', desactivarMau);
-    } else {
-        bestSellerCard.addEventListener('mouseenter', activarMau);
-        bestSellerCard.addEventListener('mouseleave', desactivarMau);
-    }
+    // Móvil y PC: Al hacer clic o tocar
+    bestSellerCard.addEventListener('click', (e) => {
+        // Si ya está visible lo ocultamos, si no, lo mostramos
+        if (mauColgado.style.opacity === '1') {
+            desactivarMau();
+        } else {
+            activarMau();
+        }
+    });
+    
+    window.addEventListener('scroll', desactivarMau);
 }
 
     const samSticker = document.getElementById('sam-sticker');
     const valueSection = document.querySelector('.value-proposition');
+
 /* --- SECCIÓN: LÓGICA DE MODALES --- */
 function cerrarGarantia() {
     const modal = document.getElementById('modal-garantia');
@@ -343,3 +348,4 @@ window.addEventListener('click', (e) => {
         liberarScroll();
     }
 });
+
