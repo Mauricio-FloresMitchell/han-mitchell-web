@@ -186,7 +186,7 @@ const garantiasData = {
         sub: "(Paquetes básicos y profesionales)",
         cubre: ["Errores técnicos del desarrollo", "Ajustes menores existentes", "Dudas sobre uso del sitio", "Revisión de formularios"],
         no: ["Cambios de diseño", "Nuevas funcionalidades", "Contenido adicional", "Rediseño completo"],
-        meta: ["Aplica alcance original", "Reportar en 30 días", "Respuesta: 48–72h"],
+        meta: ["Aplica alcance original", "Vigencia de 30 días", "Respuesta: 48–72h"],
         tip: "💡 Ideal para dar tranquilidad a clientes que están comenzando."
     },
     extendida: {
