@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: 'POST',
                 mode: 'no-cors'
             }).then(() => {
+                fbq('track', 'Lead');
                 mostrarConfirmacionInline('contact-confirm', "✅ ¡Mensaje Recibido!");
                 showToast("📩 ¡Recibido! Te hablo pronto.");
                 contactForm.reset();
@@ -347,5 +348,15 @@ window.addEventListener('click', (e) => {
         popupOverlay.style.display = 'none';
         liberarScroll();
     }
+});
+
+// Medir clics en botones de WhatsApp
+document.querySelectorAll('a[href*="wa.me"]').forEach(button => {
+    button.addEventListener('click', () => {
+        fbq('track', 'Contact', {
+            content_name: 'WhatsApp Inquiry',
+            content_category: 'Lead Generation'
+        });
+    });
 });
 
