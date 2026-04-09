@@ -1564,3 +1564,46 @@ body.modal-open {
 #best-seller-card {
     cursor: pointer;
 }
+
+/* --- SECCIÓN: ESTILOS LEGALES (Aviso de Privacidad) --- */
+.legal-content {
+    background: rgba(12, 13, 13, 0.4) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 16px !important;
+    margin: 40px auto 80px !important;
+    padding: 80px 10% !important;
+    max-width: 1200px !important;
+    width: 90% !important;
+    box-sizing: border-box !important;
+    display: block !important;
+}
+
+.legal-content h1 {
+    color: var(--brand-orange);
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.legal-content h2 {
+    color: var(--brand-cyan);
+    font-size: 1.4rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.legal-content p, 
+.legal-content ul {
+    color: #d1d1d1;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 40px 25px !important;
+    }
+}
